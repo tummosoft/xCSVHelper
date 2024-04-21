@@ -45,12 +45,13 @@ End Sub
 
 Sub Globals
 	
+	Private Button2 As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layout")
 	File.Copy(File.DirAssets,"customers-100.csv", File.DirInternalCache, "file1.csv")
-	
+
 End Sub
 
 Sub Activity_Resume
@@ -71,10 +72,26 @@ Sub Button1_Click
 	csvparsering.SkipEmptyRows = True
 	csvparsering.ErrorOnDifferentFieldCount = True
 	Dim lstrs As List = csvparsering.Parser(filepath, fileds)
+	
 	Log("Size=" & lstrs.Size)
 	
 	For i=0 To lstrs.Size - 1
 		Dim row As Map = lstrs.Get(i)
 		Log(row.Get("_firstname"))
+	Next
+End Sub
+
+Private Sub Button2_Click
+	Dim filepath As String = File.Combine(File.DirInternalCache, "file1.csv")
+		
+	csvparsering.FieldSeparator = ","
+	csvparsering.SkipEmptyRows = True
+	csvparsering.ErrorOnDifferentFieldCount = True
+	
+	Dim csvRecord As xCSVRecord = csvparsering.Parser2(filepath)
+	
+	
+	For Each w1 In csvRecord
+		Log(w1)
 	Next
 End Sub
