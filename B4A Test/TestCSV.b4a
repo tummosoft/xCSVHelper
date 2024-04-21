@@ -45,6 +45,7 @@ End Sub
 
 Sub Globals
 	
+	Private Button2 As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -77,4 +78,20 @@ Sub Button1_Click
 		Dim row As Map = lstrs.Get(i)
 		Log(row.Get("_firstname"))
 	Next
+End Sub
+
+Private Sub Button2_Click
+	Dim filepath As String = File.Combine(File.DirInternalCache, "file1.csv")
+	csvparsering.Initialize("csvparsering")
+	csvparsering.FieldSeparator = ","
+	csvparsering.SkipEmptyRows = True
+	csvparsering.ErrorOnDifferentFieldCount = True	
+	csvparsering.Parser2(filepath)
+End Sub
+
+Sub csvparsering_Parsing(row As xCSVRecord)
+	
+	Log("col=" &  row.getByColumn(0))
+	Log("col=" &  row.getByColumn(1))
+	Log("col=" &  row.getByColumn(2))
 End Sub

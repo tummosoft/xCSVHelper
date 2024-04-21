@@ -24,5 +24,9 @@ Public Sub setcustomerid(value As String)
 End Sub
 
 Public Sub setfirstname(value As String)
-	fname = value
+	
+	Log(value.Length)
+	If (value.Length > 0) Then
+		'Log("ITEM 0=" & value(0))
+	End If
 End Sub
