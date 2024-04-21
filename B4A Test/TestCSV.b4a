@@ -83,6 +83,7 @@ End Sub
 
 Private Sub Button2_Click
 	Dim filepath As String = File.Combine(File.DirInternalCache, "file1.csv")
+<<<<<<< HEAD
 		
 	csvparsering.FieldSeparator = ","
 	csvparsering.SkipEmptyRows = True
@@ -94,4 +95,18 @@ Private Sub Button2_Click
 	For Each w1 In csvRecord
 		Log(w1)
 	Next
+=======
+	csvparsering.Initialize("csvparsering")
+	csvparsering.FieldSeparator = ","
+	csvparsering.SkipEmptyRows = True
+	csvparsering.ErrorOnDifferentFieldCount = True	
+	csvparsering.Parser2(filepath)
+End Sub
+
+Sub csvparsering_Parsing(row As xCSVRecord)
+	
+	Log("col=" &  row.getByColumn(0))
+	Log("col=" &  row.getByColumn(1))
+	Log("col=" &  row.getByColumn(2))
+>>>>>>> d3c707f1f85ac673ff9acded70d042a1dba98d96
 End Sub

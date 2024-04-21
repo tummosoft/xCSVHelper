@@ -4,9 +4,13 @@ ModuleBookmarks2=
 ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleBreakpoints2=
-ModuleClosedNodes0=1,2
+ModuleClosedNodes0=2
 ModuleClosedNodes1=
 ModuleClosedNodes2=1
+<<<<<<< HEAD
 NavigationStack=csvRecords,Class_Globals,4,4,csvRecords,setcustomerid,16,0,csvRecords,setfirstname,20,1,Main,Activity_Resume,35,0,Main,Activity_Pause,37,0,Main,Activity_Create,30,6,Visual Designer,Layout.bal,-100,1,Main,Globals,26,0,Main,Button1_Click,52,6,Main,Button2_Click,69,6
+=======
+NavigationStack=csvRecords,Class_Globals,3,4,csvRecords,setid,14,0,csvRecords,Initialize,10,0,csvRecords,setfirstname,25,6,csvRecords,setcustomerid,15,0,Main,Activity_Pause,39,0,Main,Activity_Create,31,0,Main,csvparsering_Parsing,74,6,Main,Button1_Click,58,6,Main,Button2_Click,60,6
+>>>>>>> d3c707f1f85ac673ff9acded70d042a1dba98d96
 SelectedBuild=0
 VisibleModules=2,1
